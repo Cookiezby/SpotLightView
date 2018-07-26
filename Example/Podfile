@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SpotLight_Example' do
+  pod 'SpotLight', :path => '../'
+
+  target 'SpotLight_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
