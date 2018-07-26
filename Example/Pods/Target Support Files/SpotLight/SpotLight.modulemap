@@ -1,0 +1,6 @@
+framework module SpotLight {
+  umbrella header "SpotLight-umbrella.h"
+
+  export *
+  module * { export * }
+}
