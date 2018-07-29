@@ -22,9 +22,8 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/Cookiezby/SpotLight'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Cookiezby' => 'zhubingyi1992@gmail.com' }
+  s.author           = { 'Cookiezby' => 'cookiezby@gmail.com' }
   s.source           = { :git => 'https://github.com/Cookiezby/SpotLight.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
