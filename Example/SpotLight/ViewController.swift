@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         let view = SpotlightView(frame: self.view.bounds, spotlight: spotlight, autoNext: true) {
             print("finish spot")
         }
-        view.addSpotlight(spotlight2)
-        view.addSpotlight(spotlight3)
+        //view.addSpotlight(spotlight2)
+        //view.addSpotlight(spotlight3)
         return view
     }()
 
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        testView.nextSpotlight()
+        testView.breathTest()
     }
     
     override func viewDidLayoutSubviews() {

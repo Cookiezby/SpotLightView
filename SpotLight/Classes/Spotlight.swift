@@ -54,13 +54,14 @@ final public class SpotlightView: UIView {
         let from = spotlights[spotlightIndex - 1]
         let to   = spotlights[spotlightIndex]
         let move = SpotlightAnimator.move(in: bounds, from: from, to: to, delegate: self)
-        spotlightLayer.add(move.animation, forKey: "path")
+        spotlightLayer.add(move.animation, forKey: "move")
         spotlightLayer.path = move.lastPath
         spotlightIndex += 1
     }
     
     public func breathTest() {
-        let breath = SpotlightAnimator.breath(maxScale: 1.2, minScale: 0.8, count: 5, duration: 1.0, deletate: self)
+        let breathAnimation = SpotlightAnimator.breath(in: bounds, spot: spotlights[0], maxScale: 0.95, minScale: 1.15, count: 10, duration: 2.0, deletate: self)
+        spotlightLayer.add(breathAnimation, forKey: "breath")
     }
     
     required public init?(coder aDecoder: NSCoder) {

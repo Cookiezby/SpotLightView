@@ -42,24 +42,42 @@ class SpotlightAnimator {
         return (animation, animation.values?.last as! CGPath)
     }
     
-    static func breath(maxScale: CGFloat, minScale: CGFloat, count: Float, duration: Double, deletate: CAAnimationDelegate) -> CAKeyframeAnimation {
+    static func breath(in bounds: CGRect, spot: Spotlight, maxScale: CGFloat, minScale: CGFloat, count: Float, duration: Double, deletate: CAAnimationDelegate) -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation()
         animation.duration = duration
-        animation.keyPath = "transform"
+        animation.keyPath = "path"
         animation.repeatCount = count
     
-        let frames = Int(duration * 60)
-        var path = [CGPath]()
-        for i in 0 ... frames {
+        let quarterFrames = Int(duration * 60 * 0.25)
+        let rect = spot.frame
+        let center = CGPoint(x: rect.origin.x + rect.size.width / 2,
+                             y: rect.origin.y + rect.size.height / 2)
+        var turnSmallPath = [CGPath]()
+        var turnLargePath = [CGPath]()
+        let smallScaleDiff = (minScale - 1) / CGFloat(quarterFrames)
+        let largeScaleDiff = (maxScale - 1) / CGFloat(quarterFrames)
+        for i in 0 ... quarterFrames {
+            let fullScreenPath = UIBezierPath(rect: bounds)
+            let smallScale = smallScaleDiff * CGFloat(i)
+            let smallSize = CGSize(width: rect.size.width * (smallScale + 1),
+                                  height: rect.size.height * (smallScale + 1))
             
+            let smallRect = CGRect(origin: CGPoint(x: center.x - smallSize.width / 2, y: center.y - smallSize.height / 2), size: smallSize)
+            let smallPath = UIBezierPath(roundedRect: smallRect, cornerRadius: spot.cornerRadius)
+            fullScreenPath.append(smallPath.reversing())
+            turnSmallPath.append(fullScreenPath.cgPath)
             
-            
+            fullScreenPath.append(smallPath)
+            let largeScale = largeScaleDiff * CGFloat(i)
+            let largeSize = CGSize(width: rect.size.width * (largeScale + 1),
+                                  height: rect.size.height * (largeScale + 1))
+            let largeRect = CGRect(origin: CGPoint(x: center.x - largeSize.width / 2, y: center.y - largeSize.height / 2), size: largeSize)
+            let largePath = UIBezierPath(roundedRect: largeRect, cornerRadius: spot.cornerRadius)
+            fullScreenPath.append(largePath.reversing())
+            turnLargePath.append(fullScreenPath.cgPath)
         }
         
-        let identity = CATransform3DIdentity
-        let minScale = CATransform3DTranslate(identity, minScale, minScale, 1.0)
-        let maxScale = CATransform3DTranslate(identity, maxScale, maxScale, 1.0)
-        animation.values = [identity, minScale, identity, maxScale, identity]
+        animation.values = turnSmallPath + turnSmallPath.reversed() + turnLargePath + turnLargePath.reversed()
         animation.delegate = deletate
         return animation
     }
