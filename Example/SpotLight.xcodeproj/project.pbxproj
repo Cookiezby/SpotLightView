@@ -218,10 +218,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2RNKT55WYW;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2RNKT55WYW;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -521,6 +523,7 @@
 			baseConfigurationReference = 44E485AEC4414E77CCB4E7A1 /* Pods-SpotLight_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2RNKT55WYW;
 				INFOPLIST_FILE = SpotLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -536,6 +539,7 @@
 			baseConfigurationReference = 65F0B641776B3BC0C48DFCFA /* Pods-SpotLight_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2RNKT55WYW;
 				INFOPLIST_FILE = SpotLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -550,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F12BA0EC403295E0F5EB3801 /* Pods-SpotLight_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2RNKT55WYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -572,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 488105C4907AB56926328D52 /* Pods-SpotLight_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2RNKT55WYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

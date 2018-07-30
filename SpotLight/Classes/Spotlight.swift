@@ -17,9 +17,16 @@ final public class SpotlightView: UIView {
     private var spotlights: [Spotlight]
     private var spotlightIndex: Int = 1
     private var completed: (() -> Void)?
+    private var autoNext: Bool
     
-    public init(frame: CGRect, spotlight: Spotlight, backgroundColor: UIColor = UIColor(white: 0.0, alpha: 0.8), completed: (() -> Void)?) {
+    public init(frame: CGRect,
+                spotlight: Spotlight,
+                backgroundColor: UIColor = UIColor(white: 0.0, alpha: 0.8),
+                autoNext: Bool = false,
+                completed: (() -> Void)?) {
+        
         self.spotlights = [spotlight]
+        self.autoNext = autoNext
         self.completed = completed
         super.init(frame: frame)
         self.backgroundColor = .clear
@@ -39,40 +46,6 @@ final public class SpotlightView: UIView {
         spotlightLayer.path = fullScreenPath.cgPath
     }
     
-    private func lightMove(from: Spotlight, to: Spotlight) {
-        let animation = CAKeyframeAnimation()
-        animation.duration = to.duration
-        animation.isRemovedOnCompletion = false
-        animation.keyPath = "path"
-        
-        let cubic = CubicBezier.cubic(animationCurve: to.animationCurve)
-        let frames = Int(to.duration * 60)
-        
-        let xDif = (to.frame.origin.x - from.frame.origin.x)
-        let yDif = (to.frame.origin.y - from.frame.origin.y)
-        let wDif = (to.frame.size.width - from.frame.size.width)
-        let hDif = (to.frame.size.height - from.frame.size.height)
-        
-        var paths = [CGPath]()
-        for i in 0 ... frames {
-            let fullScreenPath = UIBezierPath(rect: bounds)
-            let t = CGFloat(i) / CGFloat(frames)
-            let progress = cubic.valueY(t: t)
-            let rect = CGRect(x: from.frame.origin.x + progress * xDif,
-                              y: from.frame.origin.y + progress * yDif,
-                          width: from.frame.width + progress * wDif,
-                         height: from.frame.height + progress * hDif)
-            
-            let spotlightPath = UIBezierPath(roundedRect: rect, cornerRadius: to.cornerRadius)
-            fullScreenPath.append(spotlightPath.reversing())
-            paths.append(fullScreenPath.cgPath)
-        }
-        
-        animation.values = paths
-        spotlightLayer.add(animation, forKey: "path")
-        spotlightLayer.path = paths.last!
-    }
-    
     public func nextSpotlight() {
         guard spotlightIndex < spotlights.count else {
             completed?()
@@ -80,15 +53,24 @@ final public class SpotlightView: UIView {
         }
         let from = spotlights[spotlightIndex - 1]
         let to   = spotlights[spotlightIndex]
-        lightMove(from: from, to: to)
+        let move = SpotlightAnimator.move(in: bounds, from: from, to: to, delegate: self)
+        spotlightLayer.add(move.animation, forKey: "path")
+        spotlightLayer.path = move.lastPath
         spotlightIndex += 1
     }
     
-    public func autoNext() {
-        
+    public func breathTest() {
+        let breath = SpotlightAnimator.breath(maxScale: 1.2, minScale: 0.8, count: 5, duration: 1.0, deletate: self)
     }
     
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension SpotlightView: CAAnimationDelegate {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        guard autoNext == true else { return }
+        nextSpotlight()
     }
 }
