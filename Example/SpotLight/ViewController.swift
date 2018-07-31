@@ -10,7 +10,6 @@ import UIKit
 import SpotLight
 
 class ViewController: UIViewController {
-    
     private var backImage: UIImageView = {
         let view = UIImageView(image: UIImage(named: "mountain.jpg"))
         view.contentMode = .scaleAspectFill
@@ -18,14 +17,8 @@ class ViewController: UIViewController {
     }()
     
     private lazy var testView: SpotlightView = {
-        let spotlight  = Spotlight(frame: CGRect(x: 100, y: 100, width: 50, height: 50), duration: 0)
-        let spotlight2 = Spotlight(frame: CGRect(x: 100, y: 200, width: 80, height: 80), duration: 2.0)
-        let spotlight3 = Spotlight(frame: CGRect(x: 50, y: 200, width: 10, height: 10), duration: 0.5)
-        let view = SpotlightView(frame: self.view.bounds, spotlight: spotlight, autoNext: true) {
-            print("finish spot")
-        }
-        //view.addSpotlight(spotlight2)
-        //view.addSpotlight(spotlight3)
+        let spotlight  = Spotlight(frame: CGRect(x: 100, y: 100, width: 50, height: 50), cornerRadius: 25)
+        let view = SpotlightView(frame: .zero, spotlight: spotlight, completed: nil)
         return view
     }()
 
@@ -37,7 +30,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        testView.breathTest()
     }
     
     override func viewDidLayoutSubviews() {

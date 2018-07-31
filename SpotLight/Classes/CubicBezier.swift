@@ -53,19 +53,4 @@ public enum SpotlightAnimationCurve {
     case curveEaseInOut
 }
 
-public struct Spotlight {
-    var frame: CGRect
-    var cornerRadius: CGFloat
-    var duration: Double
-    var animationCurve: SpotlightAnimationCurve
-    
-    public init(frame: CGRect, duration: Double, cornerRadius: CGFloat = 0, animationCurve: SpotlightAnimationCurve = .liner) {
-        self.frame = frame
-        self.cornerRadius = cornerRadius
-        self.duration = duration
-        self.animationCurve = animationCurve
-    }
-}
-
-
 
