@@ -8,20 +8,22 @@
 import Foundation
 import UIKit
 
-final public class SpotlightView: UIView {
-    private let spotlightLayer: CAShapeLayer = {
+public class SpotlightView: UIView {
+    var spotlightLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
         return layer
     }()
     
-    private var animations: [SpotlightAnimation]
-    private var completed: (() -> Void)?
+    var autoNext: Bool
+    var animations: [SpotlightAnimation]
+    var completed: (() -> Void)?
     
     public init(frame: CGRect,
                 spotlight: Spotlight,
                 backgroundColor: UIColor = UIColor(white: 0.0, alpha: 0.8),
                 autoNext: Bool = false,
                 completed: (() -> Void)?) {
+        self.autoNext = autoNext
         self.animations = []
         self.completed = completed
         super.init(frame: frame)
@@ -37,10 +39,12 @@ final public class SpotlightView: UIView {
    
     public func popAnimation() {
         guard animations.count > 0 else { return }
-        let animation = animations.remove(at: 0)
+        let animation = animations[0]
         switch animation.type {
         case .move:
             performMove(animation: animation as! SpotlightMove)
+        case .scale:
+            performScale(animation: animation as! SpotlightScale)
         case .breath:
             performBreath(animation: animation as! SpotlightBreath)
         }
@@ -65,6 +69,13 @@ extension SpotlightView {
         spotlightLayer.path = result.lastPath
     }
     
+    func performScale(animation: SpotlightScale) {
+        let toRect = animation.spot.frame.insetBy(dx: (animation.scale - 1) * animation.spot.frame.width / 2,
+                                                  dy: (animation.scale - 1) * animation.spot.frame.height / 2)
+        let toSpot = Spotlight(frame: toRect, cornerRadius: animation.spot.cornerRadius)
+        performMove(animation: SpotlightMove(from: animation.spot, to: toSpot, duration: animation.duration, animationCurve: animation.animationCurve))
+    }
+    
     func performBreath(animation: SpotlightBreath) {
         let result = SpotlightAnimator.breath(in: bounds, breath: animation, deletate: self)
         spotlightLayer.add(result.animation, forKey: animation.type.rawValue)
@@ -72,15 +83,16 @@ extension SpotlightView {
     }
 }
 
-
 extension SpotlightView: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        let type = anim.value(forKey: "type") as! SpotlightAnimationType
-        switch type {
-        case .move:
-            break
-        case .breath:
-            break
+        guard animations.count > 0 else {
+            completed?()
+            return
+        }
+        let animation = animations.remove(at: 0)
+        animation.completed?()
+        if autoNext {
+           popAnimation()
         }
     }
 }

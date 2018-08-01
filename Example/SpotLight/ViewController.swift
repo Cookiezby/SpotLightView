@@ -16,13 +16,9 @@ class ViewController: UIViewController {
         return view
     }()
     
-    private lazy var testView: SpotlightView = {
+    private lazy var testView: SpotlightChainView = {
         let spotlight  = Spotlight(frame: CGRect(x: 100, y: 100, width: 50, height: 50), cornerRadius: 25)
-        let spotlight2 = Spotlight(frame: CGRect(x: 100, y: 200, width: 50, height: 50), cornerRadius: 25)
-        let view = SpotlightView(frame: .zero, spotlight: spotlight, completed: nil)
-        let animation = SpotlightMove(from: spotlight, to: spotlight2, duration: 2.0, animationCurve: .liner)
-        let animation2 = SpotlightBreath(spot: spotlight, minScale: 0.9, maxScale: 1.1, duration: 1, repeatCount: 10)
-        view.pushAnimation(animation2)
+        let view = SpotlightChainView(frame: self.view.bounds, spotlight: spotlight, backgroundColor: UIColor(white: 0.0, alpha: 0.5), autoNext: true, completed: nil)
         return view
     }()
 
@@ -34,7 +30,11 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        testView.popAnimation()
+        testView.moveTo(Spotlight(frame: CGRect(x: 100, y: 200, width: 50, height: 50), cornerRadius: 25), duration: 3)
+            .sleep(duration: 3)
+            .breath(minScale: 0.8, maxScale: 1.2, duration: 2, repeatCount: 2)
+            .scaleTo(2, duratoin: 1)
+            .moveTo(Spotlight(frame: CGRect(x: 100, y: 100, width: 50, height: 50), cornerRadius: 25), duration: 3, completed: nil).start()
     }
     
     override func viewDidLayoutSubviews() {

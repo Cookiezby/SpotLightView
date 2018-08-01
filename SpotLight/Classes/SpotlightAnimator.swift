@@ -44,6 +44,10 @@ class SpotlightAnimator {
         return (animation, animation.values?.last as! CGPath)
     }
     
+//    static func scale(in bounds: CGRect, scale: SpotlightScale, delegate: CAAnimationDelegate) -> SpotlightAnimationPath {
+//        
+//    }
+    
     static func breath(in bounds: CGRect, breath: SpotlightBreath, deletate: CAAnimationDelegate) -> SpotlightAnimationPath {
         let animation = CAKeyframeAnimation()
         animation.duration = breath.duration
