@@ -7,10 +7,10 @@
 
 import Foundation
 
+typealias SpotlightAnimationPath = (animation: CAKeyframeAnimation, lastPath: CGPath)
 
 class SpotlightAnimator {
-    typealias SpotlightMoveResult = (animation: CAKeyframeAnimation, lastPath: CGPath)
-    static func move(in bounds: CGRect, move: SpotlightMove, delegate: CAAnimationDelegate) -> SpotlightMoveResult {
+    static func move(in bounds: CGRect, move: SpotlightMove, delegate: CAAnimationDelegate) -> SpotlightAnimationPath {
         let animation = CAKeyframeAnimation()
         animation.duration = move.duration
         animation.isRemovedOnCompletion = false
@@ -44,11 +44,12 @@ class SpotlightAnimator {
         return (animation, animation.values?.last as! CGPath)
     }
     
-    static func breath(in bounds: CGRect, breath: SpotlightBreath, deletate: CAAnimationDelegate) -> CAKeyframeAnimation {
+    static func breath(in bounds: CGRect, breath: SpotlightBreath, deletate: CAAnimationDelegate) -> SpotlightAnimationPath {
         let animation = CAKeyframeAnimation()
         animation.duration = breath.duration
         animation.keyPath = "path"
         animation.repeatCount = breath.repeatCount
+        animation.isRemovedOnCompletion = false
     
         let quarterFrames = Int(breath.duration * 60 * 0.25)
         let rect = breath.spot.frame
@@ -82,6 +83,6 @@ class SpotlightAnimator {
         animation.values = turnSmallPath + turnSmallPath.reversed() + turnLargePath + turnLargePath.reversed()
         animation.delegate = deletate
         animation.setValue(SpotlightAnimationType.breath, forKey: "type")
-        return animation
+        return (animation, animation.values?.last as! CGPath)
     }
 }

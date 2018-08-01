@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     
     private lazy var testView: SpotlightView = {
         let spotlight  = Spotlight(frame: CGRect(x: 100, y: 100, width: 50, height: 50), cornerRadius: 25)
+        let spotlight2 = Spotlight(frame: CGRect(x: 100, y: 200, width: 50, height: 50), cornerRadius: 25)
         let view = SpotlightView(frame: .zero, spotlight: spotlight, completed: nil)
+        let animation = SpotlightMove(from: spotlight, to: spotlight2, duration: 2.0, animationCurve: .liner)
+        let animation2 = SpotlightBreath(spot: spotlight, minScale: 0.9, maxScale: 1.1, duration: 1, repeatCount: 10)
+        view.pushAnimation(animation2)
         return view
     }()
 
@@ -30,6 +34,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        testView.popAnimation()
     }
     
     override func viewDidLayoutSubviews() {

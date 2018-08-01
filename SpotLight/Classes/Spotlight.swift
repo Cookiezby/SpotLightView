@@ -26,15 +26,25 @@ final public class SpotlightView: UIView {
         self.completed = completed
         super.init(frame: frame)
         self.backgroundColor = .clear
-        self.spotlightLayer.fillColor = backgroundColor.cgColor
+        spotlightLayer.fillColor = backgroundColor.cgColor
         layer.addSublayer(spotlightLayer)
         lightUp(spotlight)
     }
     
-    public func addSpotlightAnimation(_ animation: SpotlightAnimation) {
+    public func pushAnimation(_ animation: SpotlightAnimation) {
         animations.append(animation)
     }
    
+    public func popAnimation() {
+        guard animations.count > 0 else { return }
+        let animation = animations.remove(at: 0)
+        switch animation.type {
+        case .move:
+            performMove(animation: animation as! SpotlightMove)
+        case .breath:
+            performBreath(animation: animation as! SpotlightBreath)
+        }
+    }
     
     private func lightUp(_ spot: Spotlight) {
         let fullScreenPath = UIBezierPath(rect: self.frame)
@@ -43,35 +53,25 @@ final public class SpotlightView: UIView {
         spotlightLayer.path = fullScreenPath.cgPath
     }
     
-
-//    public func nextSpotlight() {
-//        guard spotlightIndex < spotlights.count else {
-//            completed?()
-//            return
-//        }
-//        let from = spotlights[spotlightIndex - 1]
-//        let to   = spotlights[spotlightIndex]
-//        let move = SpotlightAnimator.move(in: bounds, from: from, to: to, delegate: self)
-//        spotlightLayer.add(move.animation, forKey: "move")
-//        spotlightLayer.path = move.lastPath
-//    }
-//
-//    public func breath(_ spot: Spotlight) {
-//        guard let breath = spot.breath else { return }
-//        let breathAnimation = SpotlightAnimator.breath(in: bounds,
-//                                                     spot: spot,
-//                                                 maxScale: breath.maxScale,
-//                                                 minScale: breath.minScale,
-//                                                    count: breath.repeatCount,
-//                                                 duration: breath.duration,
-//                                                 deletate: self)
-//        spotlightLayer.add(breathAnimation, forKey: "breath")
-//    }
-    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+extension SpotlightView {
+    func performMove(animation: SpotlightMove) {
+        let result = SpotlightAnimator.move(in: bounds, move: animation, delegate: self)
+        spotlightLayer.add(result.animation, forKey: animation.type.rawValue)
+        spotlightLayer.path = result.lastPath
+    }
+    
+    func performBreath(animation: SpotlightBreath) {
+        let result = SpotlightAnimator.breath(in: bounds, breath: animation, deletate: self)
+        spotlightLayer.add(result.animation, forKey: animation.type.rawValue)
+        spotlightLayer.path = result.lastPath
+    }
+}
+
 
 extension SpotlightView: CAAnimationDelegate {
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
