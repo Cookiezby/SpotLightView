@@ -70,10 +70,9 @@ extension SpotlightView {
     }
     
     func performScale(animation: SpotlightScale) {
-        let toRect = animation.spot.frame.insetBy(dx: (animation.scale - 1) * animation.spot.frame.width / 2,
-                                                  dy: (animation.scale - 1) * animation.spot.frame.height / 2)
-        let toSpot = Spotlight(frame: toRect, cornerRadius: animation.spot.cornerRadius)
-        performMove(animation: SpotlightMove(from: animation.spot, to: toSpot, duration: animation.duration, animationCurve: animation.animationCurve))
+        let result = SpotlightAnimator.scale(in: bounds, scale: animation, delegate: self)
+        spotlightLayer.add(result.animation, forKey: animation.type.rawValue)
+        spotlightLayer.path = result.lastPath
     }
     
     func performBreath(animation: SpotlightBreath) {

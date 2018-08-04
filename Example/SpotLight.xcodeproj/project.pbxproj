@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		764AC827211537CB00F67B2C /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764AC826211537CB00F67B2C /* ViewController2.swift */; };
 		765BAE29210C8E80008D0133 /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 765BAE28210C8E7F008D0133 /* mountain.jpg */; };
 		8932D4622B6AEA890AA6DA59 /* Pods_SpotLight_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9F3F3444D03FFEB1BD417 /* Pods_SpotLight_Example.framework */; };
 		DF8C941B7ACE63F63581B589 /* Pods_SpotLight_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C05A6C194D5BF65E4CF2922 /* Pods_SpotLight_Tests.framework */; };
@@ -45,6 +46,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		65F0B641776B3BC0C48DFCFA /* Pods-SpotLight_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotLight_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotLight_Example/Pods-SpotLight_Example.release.xcconfig"; sourceTree = "<group>"; };
+		764AC826211537CB00F67B2C /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		765BAE28210C8E7F008D0133 /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
 		B5CAC3E2B4ABE6648532CFFF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F12BA0EC403295E0F5EB3801 /* Pods-SpotLight_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotLight_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotLight_Tests/Pods-SpotLight_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				765BAE28210C8E7F008D0133 /* mountain.jpg */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				764AC826211537CB00F67B2C /* ViewController2.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -378,6 +381,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				764AC827211537CB00F67B2C /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
