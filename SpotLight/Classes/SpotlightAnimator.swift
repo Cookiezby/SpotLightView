@@ -60,8 +60,7 @@ class SpotlightAnimator {
             fullScreenPath.usesEvenOddFillRule = true
             let s =  CGFloat(i) * scaleDiff
             let cornerRadius = scale.spot.cornerRadius * (s + 1)
-            let rect = scale.spot.frame.insetBy(dx: -s * scale.spot.frame.width / 2,
-                                                dy: -s * scale.spot.frame.height / 2)
+            let rect = scale.spot.frame.insetBy(dx: -s * scale.spot.frame.width / 2, dy: -s * scale.spot.frame.height / 2)
             let spotlightPath = CGMutablePath()
             spotlightPath.addPath(CGPath(roundedRect: rect, cornerWidth: cornerRadius, cornerHeight: cornerRadius, transform: nil))
             fullScreenPath.append(UIBezierPath(cgPath: spotlightPath))
@@ -96,9 +95,10 @@ class SpotlightAnimator {
             let smallSize = CGSize(width: rect.size.width * (smallScale + 1),
                                   height: rect.size.height * (smallScale + 1))
             
+            let smallCornerRadius = (smallScale + 1) * breath.spot.cornerRadius
             let smallRect = CGRect(origin: CGPoint(x: center.x - smallSize.width / 2, y: center.y - smallSize.height / 2), size: smallSize)
             let smallPath = CGMutablePath()
-            smallPath.addPath(CGPath(roundedRect: smallRect, cornerWidth: breath.spot.cornerRadius, cornerHeight: breath.spot.cornerRadius, transform: nil))
+            smallPath.addPath(CGPath(roundedRect: smallRect, cornerWidth: smallCornerRadius, cornerHeight: smallCornerRadius, transform: nil))
             fullScreenPath.append(UIBezierPath(cgPath: smallPath))
             turnSmallPath.append(fullScreenPath.cgPath)
             
@@ -107,9 +107,10 @@ class SpotlightAnimator {
             let largeScale = largeScaleDiff * CGFloat(i)
             let largeSize = CGSize(width: rect.size.width * (largeScale + 1),
                                   height: rect.size.height * (largeScale + 1))
+            let largeCornerRaduis = (largeScale + 1) * breath.spot.cornerRadius
             let largeRect = CGRect(origin: CGPoint(x: center.x - largeSize.width / 2, y: center.y - largeSize.height / 2), size: largeSize)
             let largePath = CGMutablePath()
-            largePath.addPath(CGPath(roundedRect: largeRect, cornerWidth: breath.spot.cornerRadius, cornerHeight: breath.spot.cornerRadius, transform: nil))
+            largePath.addPath(CGPath(roundedRect: largeRect, cornerWidth: largeCornerRaduis, cornerHeight: largeCornerRaduis, transform: nil))
             fullScreenPath.append(UIBezierPath(cgPath: largePath))
             turnLargePath.append(fullScreenPath.cgPath)
         }
@@ -118,11 +119,5 @@ class SpotlightAnimator {
         animation.delegate = deletate
         animation.setValue(SpotlightAnimationType.breath, forKey: "type")
         return (animation, animation.values?.last as! CGPath)
-    }
-}
-
-extension SpotlightAnimator {
-    func drawRectPath(frame: CGRect, cornerRadius: CGFloat) {
-        
     }
 }

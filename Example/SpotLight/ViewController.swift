@@ -10,37 +10,37 @@ import UIKit
 import SpotLight
 
 class ViewController: UIViewController {
-    private var backImage: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "mountain.jpg"))
-        view.contentMode = .scaleAspectFill
+   
+    private let logo: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "logo")?.withRenderingMode(.alwaysTemplate))
+        view.tintColor = .white
+        view.contentMode = .scaleAspectFit
+        view.bounds = CGRect(x: 0, y: 0, width: 111, height: 32)
         return view
     }()
     
-    private lazy var testView: SpotlightChainView = {
-        let spotlight  = Spotlight(frame: CGRect(x: 100, y: 100, width: 50, height: 50), cornerRadius: 10)
-        let view = SpotlightChainView(frame: self.view.bounds, spotlight: spotlight, backgroundColor: UIColor(white: 0.0, alpha: 0.5), autoNext: true, completed: nil)
-        return view
-    }()
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    private var spotView: SpotlightChainView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(backImage)
-        view.addSubview(testView)
+        navigationItem.titleView = logo
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        testView.moveTo(Spotlight(frame: CGRect(x: 100, y: 200, width: 50, height: 50), cornerRadius: 20), duration: 3)
-                //.sleep(duration: 3)
-                //.breath(minScale: 0.8, maxScale: 1.2, duration: 2, repeatCount: 2)
-                .scaleTo(0.5, duratoin: 1).start()
-                //.moveTo(Spotlight(frame: CGRect(x: 100, y: 100, width: 200, height: 50), cornerRadius: 17.5), duration: 2, completed: nil).start()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        backImage.frame = view.bounds
-        testView.frame = view.bounds
+        let firstSpot = Spotlight(frame: emailTextField.frame.insetBy(dx: -5, dy: -5), cornerRadius: emailTextField.layer.cornerRadius)
+        let spotView = SpotlightChainView(frame: view.bounds, spotlight: firstSpot, autoNext: true, completed: nil)
+        navigationController?.view.addSubview(spotView)
+        spotView.sleep(duration: 3)
+                .moveTo(Spotlight(frame: passwordTextField.frame.insetBy(dx: -5, dy: -5), cornerRadius: passwordTextField.layer.cornerRadius), duration: 0.8, curve: .curveEaseInOut)
+                .sleep(duration: 3)
+                .moveTo(Spotlight(frame: loginButton.frame.insetBy(dx: -5, dy: -5), cornerRadius: loginButton.layer.cornerRadius), duration: 0.8, curve: .curveEaseInOut)
+                .start()
+        
     }
 
     override func didReceiveMemoryWarning() {

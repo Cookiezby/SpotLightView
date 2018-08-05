@@ -54,7 +54,13 @@ public struct SpotlightScale: SpotlightAnimation {
     public var duration: Double
     public var animationCurve: SpotlightAnimationCurve
     public var completed: (() -> Void)?
-    
+    public var to: Spotlight {
+        get {
+            let frame = spot.frame.insetBy(dx: (1 - scale) * spot.frame.width / 2,
+                                           dy: (1 - scale) * spot.frame.height / 2)
+            return Spotlight(frame: frame, cornerRadius: spot.cornerRadius * scale)
+        }
+    }
     public init(spot: Spotlight, scale: CGFloat, duration: Double, animationCurve: SpotlightAnimationCurve, completed: (() -> Void)?) {
         self.spot = spot
         self.scale = scale

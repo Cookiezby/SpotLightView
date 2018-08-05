@@ -53,8 +53,10 @@ public class SpotlightView: UIView {
     
     private func lightUp(_ spot: Spotlight) {
         let fullScreenPath = UIBezierPath(rect: self.frame)
-        let path = UIBezierPath(roundedRect: spot.frame, cornerRadius: spot.cornerRadius)
-        fullScreenPath.append(path.reversing())
+        fullScreenPath.usesEvenOddFillRule = true
+        let path = CGMutablePath()
+        path.addPath(CGPath(roundedRect: spot.frame, cornerWidth: spot.cornerRadius, cornerHeight: spot.cornerRadius, transform: nil))
+        fullScreenPath.append(UIBezierPath(cgPath: path))
         spotlightLayer.path = fullScreenPath.cgPath
     }
     
