@@ -30,11 +30,11 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        testView.moveTo(Spotlight(frame: CGRect(x: 100, y: 200, width: 50, height: 50), cornerRadius: 5), duration: 3)
+        testView.moveTo(Spotlight(frame: CGRect(x: 100, y: 200, width: 50, height: 50), cornerRadius: 20), duration: 3)
                 //.sleep(duration: 3)
                 //.breath(minScale: 0.8, maxScale: 1.2, duration: 2, repeatCount: 2)
-                .scaleTo(0.5, duratoin: 1)
-                .moveTo(Spotlight(frame: CGRect(x: 100, y: 100, width: 200, height: 50), cornerRadius: 17.5), duration: 2, completed: nil).start()
+                .scaleTo(0.5, duratoin: 1).start()
+                //.moveTo(Spotlight(frame: CGRect(x: 100, y: 100, width: 200, height: 50), cornerRadius: 17.5), duration: 2, completed: nil).start()
     }
     
     override func viewDidLayoutSubviews() {

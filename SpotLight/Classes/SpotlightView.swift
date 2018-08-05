@@ -11,6 +11,7 @@ import UIKit
 public class SpotlightView: UIView {
     var spotlightLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
+         layer.fillRule = kCAFillRuleEvenOdd
         return layer
     }()
     

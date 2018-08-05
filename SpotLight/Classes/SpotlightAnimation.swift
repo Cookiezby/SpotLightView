@@ -14,7 +14,7 @@ public struct Spotlight {
     
     public init(frame: CGRect, cornerRadius: CGFloat = 0) {
         self.frame = frame
-        self.cornerRadius = min(frame.height * 0.32, cornerRadius)
+        self.cornerRadius = min(frame.height / 2, cornerRadius)
     }
 }
 
