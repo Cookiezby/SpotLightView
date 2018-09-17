@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		00224FB0FC920A16FC081D4E7D5A39F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		01E0B0D160DA1529BE1FA66EB60226D6 /* SpotlightAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E6C5364CAACB3563774D141E31815C /* SpotlightAnimation.swift */; };
 		06FB076A601CEB3214C6AD6200A0C49B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		19E6B019287CFC060C154C389954414F /* SpotLight-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A726BAEA2F7E6CC9A8016E22167404E1 /* SpotLight-dummy.m */; };
 		1AC07F1F7BE632410269069A335EC3BB /* Pods-SpotLight_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CAED8DF8C8BD38544AE6BD741E0DF4 /* Pods-SpotLight_Example-dummy.m */; };
-		308DF56D3D859741F762543B8631581E /* SpotlightChainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587031213CD08C252DE5DF4AA64AE2B4 /* SpotlightChainView.swift */; };
-		3B1FD292108435087655A8C1C167BD3B /* SpotlightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415BE00E680B7014CF8A64ADA69B948B /* SpotlightAnimator.swift */; };
-		4D1ABCC2623B2A57CD1C371CCD6B4ACC /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71204037AF20F9724F606E6445F05CE5 /* CubicBezier.swift */; };
+		2A8E492879E20BE0675A66DADDBD57AB /* SpotLight-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DB7D522BBF02DA0C5D07BEE463BB30 /* SpotLight-dummy.m */; };
 		514F433D56E887B5E78588008F1EE4D0 /* Pods-SpotLight_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A2EE6D77434B3D9814C6E6A041C96260 /* Pods-SpotLight_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		670AB219B598C3F92EB089CD1BF4781E /* SpotLight-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A381B69374E075D275A4B97936804E86 /* SpotLight-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		670AB219B598C3F92EB089CD1BF4781E /* SpotLight-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B59EE2273061582B00EF2A1036D54099 /* SpotLight-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7133937D9EDBB8B599884287BB955CCE /* SpotlightAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41DC965F4E59E7D95854B2523681E90 /* SpotlightAnimation.swift */; };
+		7BCC9D0C2B1CEE28CDBF8DC06689C04F /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C813D4DF867FF503312D62F590F662 /* CubicBezier.swift */; };
+		7F1F4F0F564F3425CA2310C241EA1127 /* SpotlightAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF127F0615AE500DACDEC4B29877D572 /* SpotlightAnimator.swift */; };
 		96EB314C2D4E866A5201DFCF0E7F7A2E /* Pods-SpotLight_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 988B1D877BF4698229977DACC8B0CF15 /* Pods-SpotLight_Tests-dummy.m */; };
-		CE2AC91A05FF712E0138A4781DDB365B /* SpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD82BFEDA66493D86C2B89DD21F0FF7 /* SpotlightView.swift */; };
+		A873608445F3C5BB8229F664DBABED88 /* SpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF77555906C3A59F528F84144E06A24 /* SpotlightView.swift */; };
 		DB54477B877C3933143DFB8274ED3EF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E9C3F250065793D21A790A2E7D969DBC /* SpotlightChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381B9BCC4D515F3CD9A35B5BFBC9BD0 /* SpotlightChain.swift */; };
 		F736FA2234D6561BC60C0641956E60B0 /* Pods-SpotLight_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F719B977E03E69B7B952E3F4F9C24A3E /* Pods-SpotLight_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -34,42 +34,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05DFD98E004B4D27A868637D79DEB381 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		0F962EA058E4DAB5F7F500B101490D6A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		102656FBF2943134E19DFBC6B54C2087 /* SpotLight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpotLight.framework; path = SpotLight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E17ADDD570C12D656F7E2E13C1BB98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		10F7F9BEBDFADCC3013CF9CB6B4DF9D2 /* Pods-SpotLight_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SpotLight_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		14250DF8376CA108C2B4231C350762B4 /* Pods-SpotLight_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpotLight_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		18C813D4DF867FF503312D62F590F662 /* CubicBezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CubicBezier.swift; path = SpotLight/Classes/CubicBezier.swift; sourceTree = "<group>"; };
 		245AE0B6219C2701874596473B3C93B4 /* Pods-SpotLight_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SpotLight_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2BF325CA194CE45088464AA3C9795CFF /* Pods-SpotLight_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SpotLight_Tests.modulemap"; sourceTree = "<group>"; };
-		2FD82BFEDA66493D86C2B89DD21F0FF7 /* SpotlightView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightView.swift; path = SpotLight/Classes/SpotlightView.swift; sourceTree = "<group>"; };
 		3D40ED4DDF6F3AA67543BB09A15875DA /* Pods-SpotLight_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpotLight_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		415BE00E680B7014CF8A64ADA69B948B /* SpotlightAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightAnimator.swift; path = SpotLight/Classes/SpotlightAnimator.swift; sourceTree = "<group>"; };
-		4B111F121FB6B04A05D8015455099D1B /* SpotLight-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotLight-prefix.pch"; sourceTree = "<group>"; };
 		4DC3C476A9DD37809EAB0E3EBCC4E7CD /* Pods-SpotLight_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpotLight_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		4E25A07AE433316E3656932CE397225B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		587031213CD08C252DE5DF4AA64AE2B4 /* SpotlightChainView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightChainView.swift; path = SpotLight/Classes/SpotlightChainView.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		678BBA89F3B89C8915A01F31D2D783E5 /* SpotLight-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotLight-prefix.pch"; sourceTree = "<group>"; };
 		67CAED8DF8C8BD38544AE6BD741E0DF4 /* Pods-SpotLight_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpotLight_Example-dummy.m"; sourceTree = "<group>"; };
-		68CEE79B90C6D09E94F11D1FAAB4734C /* SpotLight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpotLight.xcconfig; sourceTree = "<group>"; };
-		71204037AF20F9724F606E6445F05CE5 /* CubicBezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CubicBezier.swift; path = SpotLight/Classes/CubicBezier.swift; sourceTree = "<group>"; };
+		72B567A9DD2F9D59F1EEBA4BD3432463 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		760F2DB5A38DE79ABDBE19B80363C0DA /* SpotLight.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpotLight.modulemap; sourceTree = "<group>"; };
+		7EC06BEE5F2BC16352BC27AFF0733051 /* SpotLight.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SpotLight.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8381B9BCC4D515F3CD9A35B5BFBC9BD0 /* SpotlightChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightChain.swift; path = SpotLight/Classes/SpotlightChain.swift; sourceTree = "<group>"; };
 		8D691D17010D3B48B7E587B553C5BFCB /* Pods-SpotLight_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpotLight_Example-frameworks.sh"; sourceTree = "<group>"; };
 		8E7D06EBAC667EC2E139BCF7A3A8265A /* Pods-SpotLight_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpotLight_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		90B9E3EA69F56399B65B17542CDD281D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		988B1D877BF4698229977DACC8B0CF15 /* Pods-SpotLight_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SpotLight_Tests-dummy.m"; sourceTree = "<group>"; };
 		9AE49256E7B17E467291B030D3D563C7 /* Pods-SpotLight_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpotLight_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9F86B4D8DC18C3E1234D4396A20529C4 /* SpotLight.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpotLight.modulemap; sourceTree = "<group>"; };
 		A2EE6D77434B3D9814C6E6A041C96260 /* Pods-SpotLight_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpotLight_Example-umbrella.h"; sourceTree = "<group>"; };
-		A381B69374E075D275A4B97936804E86 /* SpotLight-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotLight-umbrella.h"; sourceTree = "<group>"; };
-		A726BAEA2F7E6CC9A8016E22167404E1 /* SpotLight-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpotLight-dummy.m"; sourceTree = "<group>"; };
 		B1317DC5DB5E0434B7031DEB465A5B0F /* Pods-SpotLight_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpotLight_Tests-resources.sh"; sourceTree = "<group>"; };
-		BBB2CF995FF5F50B59C5E47A22C8EF69 /* SpotLight.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SpotLight.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B59EE2273061582B00EF2A1036D54099 /* SpotLight-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpotLight-umbrella.h"; sourceTree = "<group>"; };
+		C4DB7D522BBF02DA0C5D07BEE463BB30 /* SpotLight-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpotLight-dummy.m"; sourceTree = "<group>"; };
 		C54F4C688179154AC5ACCC210BF0E2B7 /* Pods-SpotLight_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpotLight_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CFB04BFE9C012FE6656BCC85D18ADA48 /* Pods_SpotLight_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SpotLight_Example.framework; path = "Pods-SpotLight_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1911D36FFC693CE7AB4E227F024CD60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1E6C5364CAACB3563774D141E31815C /* SpotlightAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightAnimation.swift; path = SpotLight/Classes/SpotlightAnimation.swift; sourceTree = "<group>"; };
+		D41DC965F4E59E7D95854B2523681E90 /* SpotlightAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightAnimation.swift; path = SpotLight/Classes/SpotlightAnimation.swift; sourceTree = "<group>"; };
 		D4BD0A21BD350D7165DD1D9B7694577B /* Pods-SpotLight_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SpotLight_Example-resources.sh"; sourceTree = "<group>"; };
 		D6D27D6391B25E3B8771BC6CCB1BA057 /* Pods-SpotLight_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpotLight_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFA01030DF8DEED998205100A37A5B8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF127F0615AE500DACDEC4B29877D572 /* SpotlightAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightAnimator.swift; path = SpotLight/Classes/SpotlightAnimator.swift; sourceTree = "<group>"; };
+		E7DB4649D3F64A4F22E11133411CA852 /* SpotLight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpotLight.xcconfig; sourceTree = "<group>"; };
+		EBF77555906C3A59F528F84144E06A24 /* SpotlightView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpotlightView.swift; path = SpotLight/Classes/SpotlightView.swift; sourceTree = "<group>"; };
 		EE81D7157A6324BB16933F0C3FFF1D89 /* Pods-SpotLight_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SpotLight_Example.modulemap"; sourceTree = "<group>"; };
 		F719B977E03E69B7B952E3F4F9C24A3E /* Pods-SpotLight_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpotLight_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F95DC65CAF1061009064578DD6B50CC8 /* Pods_SpotLight_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SpotLight_Tests.framework; path = "Pods-SpotLight_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,19 +116,9 @@
 		35ECDF3B307A62E6F5F6EF401F2095FD /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE2EBE308A90B092CB2202AFEF7D658E /* SpotLight */,
+				E7E58B8841E5DEE0F241B34ADF593822 /* SpotLight */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		3C76D577BF210116A8B21C5E7676CEAF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				0F962EA058E4DAB5F7F500B101490D6A /* LICENSE */,
-				05DFD98E004B4D27A868637D79DEB381 /* README.md */,
-				BBB2CF995FF5F50B59C5E47A22C8EF69 /* SpotLight.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		3E29DB9393E83137BD4FA7D2E03545C5 /* Pods-SpotLight_Tests */ = {
@@ -149,15 +139,15 @@
 			path = "Target Support Files/Pods-SpotLight_Tests";
 			sourceTree = "<group>";
 		};
-		731B3BA0F4A1B6E7A848948B3CB9C319 /* Support Files */ = {
+		6C69BFEC24B0F935B12B098AF968C8D5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D1911D36FFC693CE7AB4E227F024CD60 /* Info.plist */,
-				9F86B4D8DC18C3E1234D4396A20529C4 /* SpotLight.modulemap */,
-				68CEE79B90C6D09E94F11D1FAAB4734C /* SpotLight.xcconfig */,
-				A726BAEA2F7E6CC9A8016E22167404E1 /* SpotLight-dummy.m */,
-				4B111F121FB6B04A05D8015455099D1B /* SpotLight-prefix.pch */,
-				A381B69374E075D275A4B97936804E86 /* SpotLight-umbrella.h */,
+				90B9E3EA69F56399B65B17542CDD281D /* Info.plist */,
+				760F2DB5A38DE79ABDBE19B80363C0DA /* SpotLight.modulemap */,
+				E7DB4649D3F64A4F22E11133411CA852 /* SpotLight.xcconfig */,
+				C4DB7D522BBF02DA0C5D07BEE463BB30 /* SpotLight-dummy.m */,
+				678BBA89F3B89C8915A01F31D2D783E5 /* SpotLight-prefix.pch */,
+				B59EE2273061582B00EF2A1036D54099 /* SpotLight-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SpotLight";
@@ -191,6 +181,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C6B94099AA5EC5FB1A6F15C2DB934F14 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				10E17ADDD570C12D656F7E2E13C1BB98 /* LICENSE */,
+				72B567A9DD2F9D59F1EEBA4BD3432463 /* README.md */,
+				7EC06BEE5F2BC16352BC27AFF0733051 /* SpotLight.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,16 +217,16 @@
 			path = "Target Support Files/Pods-SpotLight_Example";
 			sourceTree = "<group>";
 		};
-		DE2EBE308A90B092CB2202AFEF7D658E /* SpotLight */ = {
+		E7E58B8841E5DEE0F241B34ADF593822 /* SpotLight */ = {
 			isa = PBXGroup;
 			children = (
-				71204037AF20F9724F606E6445F05CE5 /* CubicBezier.swift */,
-				D1E6C5364CAACB3563774D141E31815C /* SpotlightAnimation.swift */,
-				415BE00E680B7014CF8A64ADA69B948B /* SpotlightAnimator.swift */,
-				587031213CD08C252DE5DF4AA64AE2B4 /* SpotlightChainView.swift */,
-				2FD82BFEDA66493D86C2B89DD21F0FF7 /* SpotlightView.swift */,
-				3C76D577BF210116A8B21C5E7676CEAF /* Pod */,
-				731B3BA0F4A1B6E7A848948B3CB9C319 /* Support Files */,
+				18C813D4DF867FF503312D62F590F662 /* CubicBezier.swift */,
+				D41DC965F4E59E7D95854B2523681E90 /* SpotlightAnimation.swift */,
+				DF127F0615AE500DACDEC4B29877D572 /* SpotlightAnimator.swift */,
+				8381B9BCC4D515F3CD9A35B5BFBC9BD0 /* SpotlightChain.swift */,
+				EBF77555906C3A59F528F84144E06A24 /* SpotlightView.swift */,
+				C6B94099AA5EC5FB1A6F15C2DB934F14 /* Pod */,
+				6C69BFEC24B0F935B12B098AF968C8D5 /* Support Files */,
 			);
 			name = SpotLight;
 			path = ../..;
@@ -284,7 +284,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6625DCFB85925A04275F6C62204F65E /* Build configuration list for PBXNativeTarget "SpotLight" */;
 			buildPhases = (
-				0B298F094E6105E453F6B73F2446B0C9 /* Sources */,
+				E218A089BDD355BE4F4EE2B9D3F6CEC5 /* Sources */,
 				F00C13A81A74D4AD1655BBA8321C5EFC /* Frameworks */,
 				2BBC8FC611B1CC057367BAD15AAE5F87 /* Headers */,
 			);
@@ -351,24 +351,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0B298F094E6105E453F6B73F2446B0C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D1ABCC2623B2A57CD1C371CCD6B4ACC /* CubicBezier.swift in Sources */,
-				19E6B019287CFC060C154C389954414F /* SpotLight-dummy.m in Sources */,
-				01E0B0D160DA1529BE1FA66EB60226D6 /* SpotlightAnimation.swift in Sources */,
-				3B1FD292108435087655A8C1C167BD3B /* SpotlightAnimator.swift in Sources */,
-				308DF56D3D859741F762543B8631581E /* SpotlightChainView.swift in Sources */,
-				CE2AC91A05FF712E0138A4781DDB365B /* SpotlightView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7E0374F9559669D997002A85B46C0F8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1AC07F1F7BE632410269069A335EC3BB /* Pods-SpotLight_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E218A089BDD355BE4F4EE2B9D3F6CEC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCC9D0C2B1CEE28CDBF8DC06689C04F /* CubicBezier.swift in Sources */,
+				2A8E492879E20BE0675A66DADDBD57AB /* SpotLight-dummy.m in Sources */,
+				7133937D9EDBB8B599884287BB955CCE /* SpotlightAnimation.swift in Sources */,
+				7F1F4F0F564F3425CA2310C241EA1127 /* SpotlightAnimator.swift in Sources */,
+				E9C3F250065793D21A790A2E7D969DBC /* SpotlightChain.swift in Sources */,
+				A873608445F3C5BB8229F664DBABED88 /* SpotlightView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +451,7 @@
 		};
 		3CD41C0BC367DC0FC0DBF39CB2CD8581 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68CEE79B90C6D09E94F11D1FAAB4734C /* SpotLight.xcconfig */;
+			baseConfigurationReference = E7DB4649D3F64A4F22E11133411CA852 /* SpotLight.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -604,7 +604,7 @@
 		};
 		A3055F540D33457660521EB004D0899A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68CEE79B90C6D09E94F11D1FAAB4734C /* SpotLight.xcconfig */;
+			baseConfigurationReference = E7DB4649D3F64A4F22E11133411CA852 /* SpotLight.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

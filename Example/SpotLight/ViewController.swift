@@ -11,36 +11,43 @@ import SpotLight
 
 class ViewController: UIViewController {
    
-    private let logo: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "logo")?.withRenderingMode(.alwaysTemplate))
-        view.tintColor = .white
-        view.contentMode = .scaleAspectFit
-        view.bounds = CGRect(x: 0, y: 0, width: 111, height: 32)
-        return view
-    }()
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    private var spotView: SpotlightChainView?
+    private var spotView: SpotlightChain?
+    
+    private let label: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 25)
+        label.text = "Input you Email Address"
+        label.textAlignment = .center
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.titleView = logo
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let firstSpot = Spotlight(frame: emailTextField.frame.insetBy(dx: -5, dy: -5), cornerRadius: emailTextField.layer.cornerRadius)
-        let spotView = SpotlightChainView(frame: view.bounds, spotlight: firstSpot, autoNext: true, completed: nil)
+        let firstSpot   = Spotlight(frame: emailTextField.frame.insetBy(dx: -5, dy: -5), cornerRadius: 0)
+        let secondSpot  = Spotlight(frame: passwordTextField.frame.insetBy(dx: -5, dy: -5), cornerRadius: 2)
+        let thirdSpot   = Spotlight(frame: loginButton.frame.insetBy(dx: -5, dy: -5), cornerRadius: 5)
+
+        let spotView = SpotlightChain(frame: view.bounds, spotlight: firstSpot, autoNext: true, completed: nil)
+        spotView.addSubview(label)
+        label.frame = CGRect(x: 0, y: spotView.bounds.height - 200, width: spotView.bounds.width, height: 200)
         navigationController?.view.addSubview(spotView)
         spotView.sleep(duration: 3)
-                .moveTo(Spotlight(frame: passwordTextField.frame.insetBy(dx: -5, dy: -5), cornerRadius: passwordTextField.layer.cornerRadius), duration: 0.8, curve: .curveEaseInOut)
+                .moveTo(secondSpot, duration: 0.8, curve: .liner, completed: { [weak self] in
+                    self?.label.text = "Input the Pwd"
+                })
                 .sleep(duration: 3)
-                .moveTo(Spotlight(frame: loginButton.frame.insetBy(dx: -5, dy: -5), cornerRadius: loginButton.layer.cornerRadius), duration: 0.8, curve: .curveEaseInOut)
+                .moveTo(thirdSpot, duration: 0.8, curve: .liner, completed: { [weak self] in
+                    self?.label.text = "Press Login Button"
+                })
                 .start()
-        
     }
 
     override func didReceiveMemoryWarning() {
