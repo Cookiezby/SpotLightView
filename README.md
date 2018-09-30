@@ -22,7 +22,7 @@ There are three main kind of animation. Move, Scale and Breath.
 
 | Move   |      Scale   |  Breath |
 |----------|:-------------:|:------:|
-| ![SpotLight_Move.gif](SpotLight/images/SpotLight_Move.gif =200x358) | ![SpotLight_Scale.gif](SpotLight/images/SpotLight_Scale.gif =200x358) | ![SpotLight_Breath.gif](SpotLight/images/SpotLight_Breath.gif =200x358) |
+| ![SpotLight_Move.gif](https://github.com/Cookiezby/SpotLight/blob/0.1.0/images/SpotLight_Move.gif =200x358) | ![SpotLight_Scale.gif](https://github.com/Cookiezby/SpotLight/blob/0.1.0/images/SpotLight_Scale.gif =200x358) | ![https://github.com/Cookiezby/SpotLight/blob/0.1.0/images/SpotLight_Breath.gif =200x358) |
 
 ## Usage
 
