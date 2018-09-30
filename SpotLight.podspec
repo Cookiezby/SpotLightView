@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SpotLight'
+  s.name             = 'SpotLightView'
   s.version          = '0.1.0'
   s.summary          = 'enlight the area for view'
   
