@@ -1,114 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m8y-D3-AUe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UVZ-3U-zHf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Example View Controller-->
+        <scene sceneID="OG5-Ir-AmE">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SpotLight_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pGP-Lm-DED" customClass="ExampleViewController" customModule="SpotLight_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="cnn-ys-zfh"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ha-b0-vYi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="LS6-xn-Gwp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YfU-ay-qcP">
-                                <rect key="frame" x="16" y="119" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZf-QO-jKp">
-                                <rect key="frame" x="16" y="201" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-Nt-xf0">
-                                <rect key="frame" x="16" y="268" width="343" height="41"/>
-                                <color key="backgroundColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="WYw-qd-8Ed"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="1" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-II-5dK">
-                                <rect key="frame" x="16" y="177" width="59" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQb-5i-5vU">
-                                <rect key="frame" x="16" y="95" width="33" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Yyy-Nt-xf0" firstAttribute="leading" secondItem="LZf-QO-jKp" secondAttribute="leading" id="71F-76-3SE"/>
-                            <constraint firstItem="Yyy-Nt-xf0" firstAttribute="top" secondItem="LZf-QO-jKp" secondAttribute="bottom" constant="37" id="GD9-pB-AZv"/>
-                            <constraint firstItem="LZf-QO-jKp" firstAttribute="top" secondItem="oFP-II-5dK" secondAttribute="bottom" constant="8" id="IDk-fr-Vxh"/>
-                            <constraint firstItem="YfU-ay-qcP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="NcI-TV-VIn"/>
-                            <constraint firstItem="LZf-QO-jKp" firstAttribute="trailing" secondItem="YfU-ay-qcP" secondAttribute="trailing" id="Nv8-j2-j8R"/>
-                            <constraint firstItem="YfU-ay-qcP" firstAttribute="top" secondItem="uQb-5i-5vU" secondAttribute="bottom" constant="8" symbolic="YES" id="Tel-1B-kcJ"/>
-                            <constraint firstItem="uQb-5i-5vU" firstAttribute="leading" secondItem="YfU-ay-qcP" secondAttribute="leading" id="bD9-V0-HHI"/>
-                            <constraint firstItem="LZf-QO-jKp" firstAttribute="top" secondItem="YfU-ay-qcP" secondAttribute="bottom" constant="52" id="eTm-cK-FeA"/>
-                            <constraint firstItem="Yyy-Nt-xf0" firstAttribute="trailing" secondItem="LZf-QO-jKp" secondAttribute="trailing" id="gmi-mw-k2e"/>
-                            <constraint firstItem="LZf-QO-jKp" firstAttribute="leading" secondItem="YfU-ay-qcP" secondAttribute="leading" id="rCj-U8-SbZ"/>
-                            <constraint firstItem="oFP-II-5dK" firstAttribute="leading" secondItem="LZf-QO-jKp" secondAttribute="leading" id="rj0-cj-lbA"/>
-                            <constraint firstItem="YfU-ay-qcP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="55" id="rsV-0I-txV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YfU-ay-qcP" secondAttribute="trailing" id="tO1-Fx-KzF"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="q5k-pp-agi"/>
-                    <connections>
-                        <outlet property="emailTextField" destination="YfU-ay-qcP" id="BXX-Os-Tlh"/>
-                        <outlet property="loginButton" destination="Yyy-Nt-xf0" id="9Zd-S6-1yV"/>
-                        <outlet property="passwordTextField" destination="LZf-QO-jKp" id="lo5-s8-nHL"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="mQK-jx-Gf4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-qy-jEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="29.23538230884558"/>
+            <point key="canvasLocation" x="884" y="776"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="2Vx-4K-7YP">
+        <scene sceneID="LXz-6p-eMa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m8y-D3-AUe" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UVZ-3U-zHf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cNV-eX-07C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rax-PK-V5K">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.16470588235294117" green="0.1803921568627451" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="XOO-Bd-lXP"/>
+                        <segue destination="pGP-Lm-DED" kind="relationship" relationship="rootViewController" id="cBd-se-aef"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F4r-Nm-00A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQb-1n-p4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="29.23538230884558"/>
+            <point key="canvasLocation" x="33" y="776"/>
         </scene>
     </scenes>
 </document>

@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7669F80C2116DD3E00E253EB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7669F80B2116DD3E00E253EB /* logo.png */; };
+		76CEDAFC2160B59000439D9E /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CEDAFB2160B59000439D9E /* ExampleViewController.swift */; };
+		76CEDAFE2161006500439D9E /* SampleViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CEDAFD2161006500439D9E /* SampleViewControllers.swift */; };
+		76CEDB002161013100439D9E /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76CEDAFF2161013100439D9E /* sample.jpg */; };
 		8932D4622B6AEA890AA6DA59 /* Pods_SpotLight_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C9F3F3444D03FFEB1BD417 /* Pods_SpotLight_Example.framework */; };
 		DF8C941B7ACE63F63581B589 /* Pods_SpotLight_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C05A6C194D5BF65E4CF2922 /* Pods_SpotLight_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +39,6 @@
 		607FACD01AFB9204008FA782 /* SpotLight_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotLight_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +47,9 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		65F0B641776B3BC0C48DFCFA /* Pods-SpotLight_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotLight_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotLight_Example/Pods-SpotLight_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7669F80B2116DD3E00E253EB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		76CEDAFB2160B59000439D9E /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		76CEDAFD2161006500439D9E /* SampleViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewControllers.swift; sourceTree = "<group>"; };
+		76CEDAFF2161013100439D9E /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		B5CAC3E2B4ABE6648532CFFF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F12BA0EC403295E0F5EB3801 /* Pods-SpotLight_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotLight_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotLight_Tests/Pods-SpotLight_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9385169134CE600109ADB7F /* SpotLight.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SpotLight.podspec; path = ../SpotLight.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -104,9 +108,11 @@
 		607FACD21AFB9204008FA782 /* Example for SpotLight */ = {
 			isa = PBXGroup;
 			children = (
+				76CEDAFF2161013100439D9E /* sample.jpg */,
 				7669F80B2116DD3E00E253EB /* logo.png */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				76CEDAFB2160B59000439D9E /* ExampleViewController.swift */,
+				76CEDAFD2161006500439D9E /* SampleViewControllers.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -257,6 +263,7 @@
 				7669F80C2116DD3E00E253EB /* logo.png in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				76CEDB002161013100439D9E /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,8 +383,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				76CEDAFE2161006500439D9E /* SampleViewControllers.swift in Sources */,
+				76CEDAFC2160B59000439D9E /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
