@@ -32,9 +32,9 @@ struct CubicBezier {
 
 extension CubicBezier {
     static let liner                = CubicBezier(point1: CGPoint(x: 0.0, y: 0.0), point2: CGPoint(x: 1.0, y: 1.0))
-    static let curveEaseIn          = CubicBezier(point1: CGPoint(x: 0.5, y: 0.0), point2: CGPoint(x: 0.5, y: 1.0))
-    static let curveEaseOut         = CubicBezier(point1: CGPoint(x: 0.5, y: 0.0), point2: CGPoint(x: 0.5, y: 1.0))
-    static let curveEaseInOut       = CubicBezier(point1: CGPoint(x: 0.5, y: 0.0), point2: CGPoint(x: 0.5, y: 1.0))
+    static let curveEaseIn          = CubicBezier(point1: CGPoint(x: 0.55, y: 0.055), point2: CGPoint(x: 0.675, y: 0.19))
+    static let curveEaseOut         = CubicBezier(point1: CGPoint(x: 0.215, y: 0.61), point2: CGPoint(x: 0.355, y: 1.0))
+    static let curveEaseInOut       = CubicBezier(point1: CGPoint(x: 0.645, y: 0.045), point2: CGPoint(x: 0.355, y: 1.0))
     
     static func cubic(animationCurve: SpotlightAnimationCurve) -> CubicBezier {
         switch animationCurve {

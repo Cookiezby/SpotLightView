@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Example View Controller-->
+        <!--SpotLight-->
         <scene sceneID="OG5-Ir-AmE">
             <objects>
                 <viewController id="pGP-Lm-DED" customClass="ExampleViewController" customModule="SpotLight_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mQK-jx-Gf4"/>
+                    <navigationItem key="navigationItem" title="SpotLight" id="mQK-jx-Gf4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQb-qy-jEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

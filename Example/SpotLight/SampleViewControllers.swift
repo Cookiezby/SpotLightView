@@ -34,7 +34,7 @@ class SampleMoveViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let spot2 = Spotlight(frame: CGRect(origin: CGPoint(x: view.center.x - 50, y: view.center.y + 200), size: CGSize(width: 100, height: 100)), cornerRadius: 0)
-        spotView?.moveTo(spot2, duration: 4.0, completed: { [weak self] in
+        spotView?.moveTo(spot2, duration: 2.0, curve: .curveEaseInOut, completed: { [weak self] in
             UIView.animate(withDuration: 1.0, animations: {
                 self?.spotView?.alpha = 0.0
             })
